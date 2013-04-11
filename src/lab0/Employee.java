@@ -76,7 +76,7 @@ public class Employee {
         char[] chars = firstName.toCharArray();
         for(char c : chars){
             if (!Character.isLetter(c) || c != '-' || c != ' ')
-                throw new IllegalArgumentException("must have 9 digits");
+                throw new IllegalArgumentException("Must be letters, hyphens, or spaces only.");
         }    
         this.firstName = firstName;
         
@@ -105,6 +105,11 @@ public class Employee {
     public void setLastName(String lastName) {
         if (lastName == null || lastName.length() == 0){
             throw new IllegalArgumentException("Entry required.");
+        }
+        char[] chars = firstName.toCharArray();
+        for(char c : chars){
+            if (!Character.isLetter(c) || c != '-' || c != ' ')
+                throw new IllegalArgumentException("Must be letters, hyphens, or spaces only.");
         }    
         this.lastName = lastName;
     }

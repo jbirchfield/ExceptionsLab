@@ -30,7 +30,7 @@ public class Challenge1 {
          * 
          */
         if (fullName == null || fullName.length()== 0){
-            throw new IllegalArgumentException("Full name must be entered.");
+            JOptionPane.showMessageDialog(null,"Full name must be entered.");
         }
         String s;
         String [] pieces = fullName.split(" ");        
